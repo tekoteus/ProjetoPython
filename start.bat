@@ -2,7 +2,7 @@
 echo === Iniciando ambient virtual===
 call env\Scripts\activate
 
-streamlit run app.py
+streamlit run main.py
 
-echo === Abrindo app.py ===
+echo === Abrindo main.py ===
 pause

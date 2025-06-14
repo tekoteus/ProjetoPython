@@ -14,7 +14,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 st.set_page_config(page_title="Reconhecimento Facial", layout="centered")
 st.title("🔐 Login com Reconhecimento Facial")
 
-# Caminho para a pasta corrigida (rostos conhecidos)
+# Caminho para a pasta corrigida
 PASTA_ROSTOS = os.path.join("C:/Projeto_Python_2.3", "corrigidos")
 if not os.path.exists(PASTA_ROSTOS):
     st.warning("⚠️ Pasta 'corrigidos' não encontrada.")
@@ -70,7 +70,6 @@ else:
             temp_path = os.path.join(tempfile.gettempdir(), uploaded_file.name)
             img.save(temp_path, format="JPEG")
             st.session_state["imagem_usuario"] = temp_path
-            st.image(img, caption="Imagem enviada", width=300)
 
     # Captura via webcam
     if modo == "📷 Webcam":
@@ -100,7 +99,6 @@ else:
                     temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=".jpg")
                     pil_img.save(temp_file.name, format="JPEG")
                     st.session_state["imagem_usuario"] = temp_file.name
-                    st.image(pil_img, caption="Imagem capturada", width=300)
                 else:
                     st.warning("❗ Nenhum frame da webcam ainda.")
 
