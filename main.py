@@ -15,7 +15,7 @@ st.set_page_config(page_title="Reconhecimento Facial", layout="centered")
 st.title("🔐 Login com Reconhecimento Facial")
 
 # Caminho para a pasta corrigida
-PASTA_ROSTOS = os.path.join("C:/Projeto_Python_2.3", "corrigidos")
+PASTA_ROSTOS = os.path.join("C:\ProjetoPython", "corrigidos")
 if not os.path.exists(PASTA_ROSTOS):
     st.warning("⚠️ Pasta 'corrigidos' não encontrada.")
 
